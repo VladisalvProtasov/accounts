@@ -6,7 +6,7 @@
       </div>
       <q-btn icon="add" @click="accountStore.addAccount()"/>
     </div>
-    <div class="accounts-list__body form-container">
+    <div v-if="accountList.length > 0" class="accounts-list__body form-container">
       <div class="grid-header">
         <div>Метки</div>
         <div>Тип записи</div>
@@ -45,6 +45,7 @@
         <q-icon name="delete" size="sm" @click="accountStore.deleteAccount(index)"/>
       </div>
     </div>
+    <div v-else>Нет учетных записей</div>
   </div>
 </template>
 
