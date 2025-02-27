@@ -3,13 +3,7 @@ import type { AccountType, State, StoredAccounts } from 'components/models'
 
 export const useAccountStore = defineStore('counter', {
   state: ():State => ({
-    accountsList: [{
-      label: '',
-      type: 'Локальная',
-      login: '',
-      password: null,
-      isVisibilityPassword: true,
-    }]
+    accountsList: [],
   }),
 
   getters: {
